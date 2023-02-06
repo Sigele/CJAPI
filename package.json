@@ -1,0 +1,18 @@
+{
+  "name": "cangjieapi",
+  "version": "1.0.0",
+  "description": "cangjie input method API",
+  "scripts": {
+    "start": "nodemon server/server,js",
+    "build": "webpack"
+  },
+  "author": "Sigele '胡说八道' Nickerson-Adams",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^4.11.0",
+    "mongoose": "^6.7.2",
+    "nodemon": "^2.0.20",
+    "webpack": "^5.75.0"
+  }
+}
