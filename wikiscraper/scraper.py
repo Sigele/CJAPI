@@ -1,5 +1,6 @@
 import os
 from bs4 import BeautifulSoup
+import requests
 #only reading html from test file
 
 with open('test.html', 'r') as html_file:
