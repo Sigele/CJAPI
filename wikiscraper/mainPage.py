@@ -1,7 +1,7 @@
 #Notes:
 # - need to implement scrape for ALL radical pages-- requests.get while parsing html for sub urls?
 # - subURLS under href are incomplete, may need to concat within get requests.get
-# - need to be able to filter results, either with character code or more specific attrs
+
 
 from bs4 import BeautifulSoup
 import requests
@@ -13,9 +13,10 @@ html_text = requests.get('https://en.wiktionary.org/wiki/Appendix:Chinese_Cangji
 
 soup = BeautifulSoup(html_text, 'lxml')
 chars = soup.find_all('a', href=re.compile('/wiki/%'))
-for char in chars:
-  char_name = char.text
-  char_page = char['href']
+#this was a test to see how to 'grab' text only from elements. saving for reference.
+# for char in chars:
+#   char_name = char.text
+#   char_page = char['href']
 
 
 # edge case for uneeded links. returns list of HTML elements
