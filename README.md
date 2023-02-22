@@ -1,14 +1,14 @@
 Cangjie Input API!
 
-Mongoose-based database API of Chinese characters and they're QWERTY inputs. Individual entries also include radical breakdown and jyutping pronunciation.
+Database API of Chinese characters and they're QWERTY inputs. Individual entries also include radical breakdown and jyutping pronunciation.
 
 To use: 
 -run 'npm install' to install dependencies
 -'npm start' to initialize
 
-Searching for Characters
+Documentation coming soon! 稍微等一下...
 
-Searching by Pronunciation
+Searching for Characters
 
 Searching by Radical
 
@@ -19,8 +19,12 @@ Searching by Radical
 
 Tech stack: 
 
+Python
+BeautifulSoup
 Typescript
 Express.js
 Mongoose
 Webpack
 Docker
+Tailwind
+AWS SDK

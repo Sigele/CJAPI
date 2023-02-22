@@ -19,3 +19,4 @@ for rad in rads:
   hrefHead = 'https://en.wiktionary.org'
   links.append(hrefHead + href)
 
+#create new file to combine mainPage & radLinks functionality, or import in
