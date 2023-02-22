@@ -15,4 +15,13 @@ soup = BeautifulSoup(html_text, 'lxml')
 chars = soup.find_all('a', href=re.compile('/wiki/%'))
 for char in chars:
   char_name = char.text
-  print(char_name)
+  char_page = char['href']
+
+
+# edge case for uneeded links. returns list of HTML elements
+for char in chars:
+  if char.find('lang') != -1:
+    chars.remove(char)
+    print(char.text)
+  
+
