@@ -11,3 +11,11 @@ soup = BeautifulSoup(page_text, 'lxml')
 #this finds the radical elements in the page ONLY. need to grab hrefs from these!
 rads = soup.findAll('a', href=re.compile('/wiki/Appendix:Chinese_Cangjie/%'))
 
+links = []
+
+# using string concatenation to build complete URLs. Should be 25 total links (YUP YUP)
+for rad in rads:
+  href = rad['href']
+  hrefHead = 'https://en.wiktionary.org'
+  links.append(hrefHead + href)
+
