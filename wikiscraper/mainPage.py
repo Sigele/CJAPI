@@ -23,6 +23,22 @@ chars = soup.find_all('a', href=re.compile('/wiki/%'))
 for char in chars:
   if char.find('lang') != -1:
     chars.remove(char)
-    print(char.text)
+    # print(char.text)
   
+def charGrab(url):
+  # define list to hold char text
+  charText = []
+  # make soup
+  html_text = requests.get(url).text
+  soup = BeautifulSoup(html_text, 'lxml')
+  chars = soup.find_all('a', href=re.compile('/wiki/%'))
+
+  for char in chars:
+    if char.find('lang') != -1:
+      chars.remove(char)
+      charText.append(char.text)
+  return charText
+
+
+print(charGrab('https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie/%E6%97%A5'))
 
