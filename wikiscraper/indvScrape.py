@@ -28,3 +28,17 @@ entry = {
 }
 
 # methods for grabbing each entry
+# currently creates a list of all characters on a radical page.
+def charGrab(url):
+  # define list to hold char text
+  charText = []
+  # make soup
+  html_text = requests.get(url).text
+  soup = BeautifulSoup(html_text, 'lxml')
+  chars = soup.find_all('a', href=re.compile('/wiki/%'))
+
+  for char in chars:
+    if char.find('lang') != -1:
+      chars.remove(char)
+      charText.append(char.text)
+  return charText

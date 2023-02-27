@@ -5,7 +5,7 @@ import requests
 import re
 
 from radLinks import URLgrab
-from mainPage import charGrab
+from charGrab import charGrab
 
 #charGrab accepts a URL and returns a list of all the Chinese characters within that page which link to subpages.
 #URLgrab accepts a URL and returns a list of URLs that link to new pages
