@@ -28,6 +28,7 @@ entry = {
 
 #test page： 蟒 (python :))
 testURL = 'https://en.wiktionary.org/wiki/%E8%9F%92'
+hrefHead = 'https://en.wiktionary.org'
 # methods for grabbing each entry
 # currently creates a list of all characters on a radical page.
 radicalMap = {
@@ -67,8 +68,11 @@ def grabEntry(url):
   entry['radicals'] = []
   for key in entry['QWERTY']:
     entry['radicals'].append(radicalMap[key])
-  altLinks = soup.find_all('a','disambig-see-also')
-  print(altLinks)
+  altChar = soup.find('b','Hani')
+
+  print(altChar.get('href'))
+  
+  
   # entry['definition'] = soup.find('li','mw-body-content').text
   # for char in chars:
   #   if char.find('lang') != -1:
