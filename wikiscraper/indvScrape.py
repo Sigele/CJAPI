@@ -23,22 +23,59 @@ entry = {
   'QWERTY': '',
   'radicals': [],
   'definition': '',
-  'dictLink': '',
   'altLinks': []
 }
 
+#test page： 蟒 (python :))
+testURL = 'https://en.wiktionary.org/wiki/%E8%9F%92'
 # methods for grabbing each entry
 # currently creates a list of all characters on a radical page.
-def charGrab(url):
+radicalMap = {
+  'A':'日', 'B': '月',
+  'C': '金','D': '木',
+  'E': '水','F': '火',
+  'G': '土','H': '竹',
+  'I': '戈','J': '十',
+  'K': '大','L': '中',
+  'M': '一','N': '弓',
+  'O': '人','P': '心',
+  'Q': '手','R': '口',
+  'S': '尸','T': '廿',
+  'U': '山','V': '女',
+  'W': '田','Y': '卜',
+  'X': '難'
+
+}
+
+for key in radicalMap:
+  print(radicalMap[key])
+def grabEntry(url):
   # define list to hold char text
-  charText = []
+  returnEntry = entry
+  print(returnEntry)
   # make soup
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
-  chars = soup.find_all('a', href=re.compile('/wiki/%'))
 
-  for char in chars:
-    if char.find('lang') != -1:
-      chars.remove(char)
-      charText.append(char.text)
-  return charText
+  #grab character itself
+  entry['name'] = soup.find('span', 'Hani').text
+
+  #qwerty input string
+  entry['QWERTY'] = soup.find('a', 'mw-redirect').text
+
+  #grab radicals, turn into set/array thingy
+  entry['radicals'] = []
+  for key in entry['QWERTY']:
+    entry['radicals'].append(radicalMap[key])
+  altLinks = soup.find_all('a','disambig-see-also')
+  print(altLinks)
+  # entry['definition'] = soup.find('li','mw-body-content').text
+  # for char in chars:
+  #   if char.find('lang') != -1:
+  #     chars.remove(char)
+  #     charText.append(char.text)
+  # return charText
+
+  return returnEntry
+
+print(grabEntry(testURL))
