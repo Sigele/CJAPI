@@ -40,4 +40,4 @@ def URLgrab(url):
 
   return links
 
-# print(URLgrab('https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie'))
+print(URLgrab('https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie'))

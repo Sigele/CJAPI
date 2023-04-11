@@ -42,3 +42,4 @@ def charGrab(url):
 
 print(charGrab('https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie/%E6%97%A5'))
 
+# this is working for the plain text of individual characters, but I need the rest of the data, i.e. separate functionality for scraping those strings as well as the link itself. Might be able to repurpose code in indvScrape.

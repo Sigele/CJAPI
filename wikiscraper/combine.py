@@ -11,3 +11,13 @@
 # level1 : radLinks
 # level2: modified!chargrab
 # level3: functionality for individual char page
+
+from bs4 import BeautifulSoup
+import requests
+import re
+
+# grab all radical URLS from main page
+
+# parse each radical URL, compiling list of all characters in page + their inputs and character page links
+
+#save to database, matching pseudoschema in indvScrape

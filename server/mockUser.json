@@ -1,0 +1,20 @@
+{
+    "users": [
+      {
+        "username": "testUser",
+        "email": "test@test.com",
+        "level": "1",
+        "lastLogin": null,
+        "user_ID": "01"
+      },
+
+      {
+        "username": "testUser2",
+        "email": "test2@test.com",
+        "level": "10",
+        "lastLogin": null,
+        "user_ID": "02"
+      }
+    ]
+    
+}

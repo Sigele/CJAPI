@@ -48,12 +48,11 @@ radicalMap = {
 
 }
 
-for key in radicalMap:
-  print(radicalMap[key])
+
 def grabEntry(url):
   # define list to hold char text
   returnEntry = entry
-  print(returnEntry)
+  # print(returnEntry)
   # make soup
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
@@ -68,9 +67,10 @@ def grabEntry(url):
   entry['radicals'] = []
   for key in entry['QWERTY']:
     entry['radicals'].append(radicalMap[key])
-  altChar = soup.find('b','Hani')
+  altChar = soup.find_all('b','Hani')
+  print(altChar)
 
-  print(altChar.get('href'))
+ 
   
   
   # entry['definition'] = soup.find('li','mw-body-content').text
