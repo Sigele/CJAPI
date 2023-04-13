@@ -63,8 +63,6 @@ def getEntries(ele):
 # wiktionary uses 2 methods to identify red Links:
 # the link text itself ends with "redLink=1"
 # the 'title' of the a element ends with "(page does not exist)"
-def redLinkCheck(link):
-  if ()
 
     
   
@@ -83,6 +81,8 @@ for line in tr:
   # some of the entries have 2 or more characters that can be typed with a single input method; the only real way to account for that is to make an entry for each idx of the text, with the same values for rads and qwerty
 
   #in those cases I also need to account for the fact that there are 2 links by using find_all instead of find, but like. PROGRESS
+
+  # writing/wrote logic to handle 2 character edge case. need to test
 
 
 

@@ -12,31 +12,48 @@ html_text = requests.get(testURL).text
 
 tableSoup = BeautifulSoup(html_text, 'lxml')
 data = []
+entries = []
 tr = tableSoup.find_all('tr')
 
-def getEntries(ele):
-  # accepts a list of HTML tr element
-  # returns an Entry class object
-  
-  td = ele.find_all('td')
+for line in tr:
+  td = line.find_all('td')
+  data.append(td)
 
-  #each tr element contains 3 tds.
-  # the first contains the radicals
-  # the second contains the QWERTY string
-  # the third contains the href to the indv page, which may or may not work, and the UTC character itself.
-
+for ele in data:
   e = Entry()
-  # get radicals
-  e.get_radicals(data[0].text)
+  e.get_character(ele[2].find(class_='Hani').text)
+  print(ele[1].text[1:-1])
+  #this is not working.......por why
+  e.get_qwerty(ele[1].text[1:-1])
+  print(e.qwerty)
+  
 
-  # get QWERTY
-  e.get_qwerty(data[1].text)[1:-1]
 
-  chars = ele.find_all('a',class_='Hani').text
-  # hand 2-char edge case
-  if (len(chars) > 1):
-    e2 = Entry()
-    e2.get_radicals(e.radicals)
-    e2.get_qwerty(e.qwerty)
-    e2.get_character(chars[1])
-    e2.get_link()
+"""
+[
+  [
+    <td><b>火卜日女</b></td>, 
+    <td>(FYAV)</td>, 
+    <td>: <span class="Hani" style="font-size:large">
+            <a href="/wiki/%E7%85%BA" title="煺">
+            煺
+            </a>
+          </span>
+    </td>
+  ]
+  [
+    <td><b>火卜月金</b></td>, 
+    <td>(FYBC)</td>, 
+    <td>: <span class="Hani" style="font-size:large">
+            <a class="new" href="/w/index.php?title=%F0%A4%8B%BA&amp;action=edit&amp;redlink=1" title="𤋺 (page does not exist)">
+            𤋺
+            </a>
+          </span>
+    </td>
+  ]
+[]
+]
+
+"""
+  
+
