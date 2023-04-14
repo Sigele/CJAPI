@@ -18,5 +18,5 @@ class Entry:
   def get_link(self, head, link):
     self.link = head + link
 
-  def get_level(self):
-    self.level = len(self.qwerty)
+  def get_level(self, number):
+    self.level = number

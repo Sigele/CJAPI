@@ -24,10 +24,12 @@ for line in tr:
 for ele in data:
   e = Entry()
   e.get_character(ele[2].find(class_='Hani').text)
-  # print(ele[1].text[1:-1])
   #this is not working.......por why
   e.get_qwerty(ele[1].text[1:-1])
   # print(e)
+  e.get_radicals(ele[0].text)
+  e.get_level(len(e.radicals))
+  e.get_link(hrefHead, ele[2].find('a')['href'])
   entries.append(e)
 pp(entries[0].__dict__)
 
