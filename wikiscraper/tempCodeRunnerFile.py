@@ -1,2 +1,1 @@
-e = Entry()
-    # e.character = entry.find()
+print(e)

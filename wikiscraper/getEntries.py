@@ -4,6 +4,8 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+from pprint import pprint as pp
+
 from entryClass import *
 
 testURL = 'https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie/%E7%81%AB'
@@ -22,11 +24,12 @@ for line in tr:
 for ele in data:
   e = Entry()
   e.get_character(ele[2].find(class_='Hani').text)
-  print(ele[1].text[1:-1])
+  # print(ele[1].text[1:-1])
   #this is not working.......por why
   e.get_qwerty(ele[1].text[1:-1])
-  print(e.qwerty)
-  
+  # print(e)
+  entries.append(e)
+pp(entries[0].__dict__)
 
 
 """

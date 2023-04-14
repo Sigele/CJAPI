@@ -10,7 +10,7 @@ class Entry:
     self.character = string
 
   def get_qwerty(self, string):
-    self.qwerty = ''
+    self.qwerty = string
 
   def get_radicals(self, string):
     self.radicals = list(string)
