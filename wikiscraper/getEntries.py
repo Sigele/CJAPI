@@ -8,11 +8,16 @@ from pprint import pprint as pp
 
 from entryClass import *
 
+#page for entries beginning with the 火 radical
 testURL = 'https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie/%E7%81%AB'
+
+#concat this with hrefs to build complete working URL
 hrefHead = 'https://en.wiktionary.org'
 html_text = requests.get(testURL).text
 
 tableSoup = BeautifulSoup(html_text, 'lxml')
+
+# redundant, only need one list
 data = []
 entries = []
 tr = tableSoup.find_all('tr')
@@ -31,8 +36,12 @@ for ele in data:
   e.get_level(len(e.radicals))
   e.get_link(hrefHead, ele[2].find('a')['href'])
   entries.append(e)
+
+# test print in readable format
 pp(entries[0].__dict__)
 
+
+# example of entry HTML structure. this file turns a 'tr' element into a list of entries
 
 """
 [
