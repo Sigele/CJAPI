@@ -1,1 +1,1 @@
-print(e)
+print('error flag', ele[2].find(class_='Hani').text)
