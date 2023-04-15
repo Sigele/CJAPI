@@ -52,28 +52,12 @@ def getEntries(url,list):
         entry.get_link(hrefHead, ele[2].find('a')['href'])
         entries.append(entry)
       populate(e)
-      
-
-    
-    
     
 
 getEntries(testURL, data)
-pp(entries[10].__dict__)
+# pp(entries[10].__dict__)
 
-  # make a new Entry class obj for each character 
-  # for double in doubles:
-  #   names = double[2].find_all('a')
-  #   for name in names:
 
-  #     # these both work
-  #     # print(name.text)
-  #     # print(name['title'])
-
-  #     e2 = Entry()
-  #     e2.get_character(name.text)
-  #     e2.get_link(hrefHead, name['href'])
-  #     pp(e2.__dict__)
     
       
       

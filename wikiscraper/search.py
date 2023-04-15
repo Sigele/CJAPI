@@ -1,0 +1,16 @@
+#searches a list for objects meeting provided criteria. This is for debugging purposes ONLY!
+
+import re
+import requests
+from pprint import pprint as pp
+from doubledEntry import entries
+
+def search(list, crit, str):
+  for entry in list: 
+      if (getattr(entry, crit) == str):
+         return entry
+  return "not found :("
+print(len(entries))      
+
+result = search(entries, 'qwerty', 'FAM')
+print(result.character)
