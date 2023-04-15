@@ -31,37 +31,49 @@ def getEntries(url,list):
   for ele in list:
     if len(ele[2].find(class_='Hani').text) > 2:
       doubles.append(ele)
-  # as above, each "double is a list of 3 td elements"
-  # print(doubles)
+      for double in doubles:
+        names = double[2].find_all('a')
+        for name in names: 
+          e2 = Entry()
+          e2.get_character(name.text)
+          e2.get_qwerty(ele[1].text[1:-1])
+          e2.get_radicals(ele[0].text)
+          e2.get_level(len(e2.radicals))
+          e2.get_link(hrefHead, name['href'])
+          entries.append(e2)
+    else:
+      e = Entry()
 
-  # make a new Entry class obj for each character 
-  for double in doubles:
-    names = double[2].find_all('a')
-    for name in names:
-      # these both work
-      print(name.text)
-      print(name['title'])
+      def populate(entry):
+        entry.get_character(ele[2].find(class_='Hani').text)
+        entry.get_qwerty(ele[1].text[1:-1])
+        entry.get_radicals(ele[0].text)
+        entry.get_level(len(e.radicals))
+        entry.get_link(hrefHead, ele[2].find('a')['href'])
+        entries.append(entry)
+      populate(e)
+      
+
     
-
-  # make array of alternate titles and links
-
-  # insert each into a new Entry object, build rest of object as normal
-      
-      
-      
-
-    e = Entry()
-
-    def populate(entry):
-      entry.get_character(ele[2].find(class_='Hani').text)
-      entry.get_qwerty(ele[1].text[1:-1])
-      entry.get_radicals(ele[0].text)
-      entry.get_level(len(e.radicals))
-      entry.get_link(hrefHead, ele[2].find('a')['href'])
-      entries.append(entry)
-    populate(e)
     
     
 
 getEntries(testURL, data)
-# pp(entries[0].__dict__)
+pp(entries[10].__dict__)
+
+  # make a new Entry class obj for each character 
+  # for double in doubles:
+  #   names = double[2].find_all('a')
+  #   for name in names:
+
+  #     # these both work
+  #     # print(name.text)
+  #     # print(name['title'])
+
+  #     e2 = Entry()
+  #     e2.get_character(name.text)
+  #     e2.get_link(hrefHead, name['href'])
+  #     pp(e2.__dict__)
+    
+      
+      
