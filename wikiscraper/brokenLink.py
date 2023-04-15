@@ -68,4 +68,4 @@ def brokenLinkCheck(listOf3Elements):
     return True
   
 getEntries(testURL, data)   
-pp(entries[28].__dict__)
+# pp(entries[28].__dict__)

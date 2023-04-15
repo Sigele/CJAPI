@@ -66,14 +66,22 @@ def populate(ele, list):
 
 
 tds = getEntries(testURL,table)
-print(len(tds))
+# print(len(tds))
 data = []
 for ele in tds:
    doubles = dblEntryCheck(ele)
-   if (type(doubles) == 'list'):
+   if hasattr(doubles, '__len__'):
+      # print('working')
+      # pp(doubles[1].__dict__)
       for dbl in doubles:
-         data.append(dbl)
-   else: 
-      populate(ele, data)
+         data.append(dbl)   
+   else:
+      populate(ele,data)
+# print(len(data))
+   
+pp(data[643].__dict__)
+      
+    
 
-pp(data[29].__dict__)
+
+# pp(data[28].__dict__)

@@ -1,1 +1,1 @@
-pp(entries[0].__dict__)
+print('working')
