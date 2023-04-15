@@ -41,7 +41,7 @@ def getEntries(url,list):
 
 getEntries(testURL, data)
   # test print in readable format
-pp(entries[0].__dict__)
+# pp(entries[0].__dict__)
 
 
   # example of entry HTML structure. this file turns a 'tr' element into a list of entries

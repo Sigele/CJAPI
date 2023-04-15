@@ -10,7 +10,7 @@ def search(list, crit, str):
       if (getattr(entry, crit) == str):
          return entry
   return "not found :("
-print(len(entries))      
+# print(len(entries))      
 
-result = search(entries, 'qwerty', 'FAM')
-print(result.character)
+# result = search(entries, 'qwerty', 'FAM')
+# print(result.character)
