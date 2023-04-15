@@ -38,8 +38,10 @@ def getEntries(url,list):
   for double in doubles:
     names = double[2].find_all('a')
     for name in names:
-      print(name.find('title'))
-    print(names)
+      # these both work
+      print(name.text)
+      print(name['title'])
+    
 
   # make array of alternate titles and links
 
@@ -62,4 +64,4 @@ def getEntries(url,list):
     
 
 getEntries(testURL, data)
-pp(entries[0].__dict__)
+# pp(entries[0].__dict__)

@@ -1,1 +1,1 @@
-print('error flag', ele[2].find(class_='Hani').text)
+pp(entries[0].__dict__)
