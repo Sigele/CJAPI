@@ -80,8 +80,16 @@ for ele in tds:
 # print(len(data))
    
 pp(data[643].__dict__)
-      
-    
+
+test_dict = []
+for item in data[:10]:
+   test_dict.append(item.__dict__)
+pp(test_dict)
+
+outfile = open('wikiscraper/writetest.json', 'w')
 
 
-# pp(data[28].__dict__)
+
+
+with open('wikiscraper/writetest.json', 'w') as final:
+   json.dump(test_dict, final, indent = 6, ensure_ascii=False)
