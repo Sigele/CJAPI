@@ -3,6 +3,7 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+import json 
 from pprint import pprint as pp
 
 from entryClass import *
@@ -24,7 +25,6 @@ def getEntries(url, table):
       elements.append(td)
 
     return elements
-
 
 def dblEntryCheck(three_tds):
     #if the element that holds the a elements contains 2 different ones, we need to save the titles but give everything else identical attributes
