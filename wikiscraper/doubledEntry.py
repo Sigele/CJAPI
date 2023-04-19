@@ -55,7 +55,7 @@ def getEntries(url,list):
     
 
 getEntries(testURL, data)
-# pp(entries[28].__dict__)
+pp(entries[28].__dict__)
 
 
     

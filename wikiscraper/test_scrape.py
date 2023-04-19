@@ -1,19 +1,33 @@
-from sandbox2 import *
-from getEntries import hrefHead
 import unittest
+from sandbox2 import *
 
-def test_entry(entry):
-    assert type(entry.character) == 'str'
-    assert type(entry.qwerty) =='str'
-    assert type(entry.radicals) == 'list'
-    assert type(entry.link) == "string"
-    assert (entry.link.find(hrefHead) != -1 or entry.link.find("Sorry") != -1)
-    assert type(entry.level) == 'int' 
+# inheriting from unittest.TestCase is standard
 
-item = data[0]
+# basic example from python docs
 
-print(type(item.character))
-# if __name__ == "__main__":
-#     test_entry(item)
-#     print("Everything passed")
+# class TestSandbox2 (unittest.TestCase):
 
+#     def test_upper(self):
+#         self.assertEqual('foo'.upper(), 'FOO')
+
+#     def test_isupper(self):
+#         self.assertTrue('FOO'.isupper())
+#         self.assertFalse('Foo'.isupper())
+
+#     def test_split(self):
+#         s = 'hello world'
+#         self.assertEqual(s.split(), ['hello', 'world'])
+#         # check that s.split fails when the separator is not a string
+#         with self.assertRaises(TypeError):
+#             s.split(2)
+
+# if __name__ == '__main__':
+#     unittest.main()
+
+class Test_basic(unittest.TestCase):
+  def test_constants(self):
+      self.assertEqual(hrefHead, 'https://en.wiktionary.org')
+      self.assertIsInstance(testURL, str)
+
+if __name__ == '__main__':
+    unittest.main()
