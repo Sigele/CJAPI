@@ -40,6 +40,7 @@ def getEntries(url,list):
     entries.append(e)
 
 getEntries(testURL, data)
+print(type(tableSoup))
   # test print in readable format
 # pp(entries[0].__dict__)
 

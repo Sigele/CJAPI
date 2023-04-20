@@ -1,9 +1,6 @@
 import unittest
 from sandbox2 import *
 
-# inheriting from unittest.TestCase is standard
-
-# basic example from python docs
 
 # class TestSandbox2 (unittest.TestCase):
 
@@ -24,10 +21,22 @@ from sandbox2 import *
 # if __name__ == '__main__':
 #     unittest.main()
 
+# check constants
+# check val returned by result
+# check return val populate
+# check return val broken link
+# check type entry
+
 class Test_basic(unittest.TestCase):
-  def test_constants(self):
-      self.assertEqual(hrefHead, 'https://en.wiktionary.org')
+  def test_URL(self):
       self.assertIsInstance(testURL, str)
+  def test_href(self):
+     self.assertEqual(hrefHead, 'https://en.wiktionary.org')
+  def test_html(self):
+     self.assertIsInstance(html_text, str)
+  def test_soup(self):
+     self.assertTrue(isinstance(soup, BeautifulSoup))
+     
 
 if __name__ == '__main__':
     unittest.main()

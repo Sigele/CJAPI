@@ -79,12 +79,12 @@ for ele in tds:
       populate(ele,data)
 # print(len(data))
    
-pp(data[643].__dict__)
+# pp(data[643].__dict__)
 
 test_dict = []
 for item in data[:10]:
    test_dict.append(item.__dict__)
-pp(test_dict)
+# pp(test_dict)
 
 outfile = open('wikiscraper/writetest.json', 'w')
 
