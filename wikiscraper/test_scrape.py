@@ -22,10 +22,11 @@ from sandbox2 import *
 #     unittest.main()
 
 # check constants
-# check val returned by result
-# check return val populate
-# check return val broken link
-# check type entry
+# check val returned by get entries //list of 3 idx sublists
+# check val returned dblEntryCheck  //list of entry class objects
+# check return val populate // null
+# check return val broken link //boolean
+# check type entry 
 
 class Test_basic(unittest.TestCase):
   def test_URL(self):

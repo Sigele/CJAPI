@@ -27,10 +27,9 @@ def getEntries(url, table):
     return elements
 
 def dblEntryCheck(three_tds):
-    #if the element that holds the a elements contains 2 different ones, we need to save the titles but give everything else identical attributes
+
     result = []
-    #should the entry building happen here? or in the main function?
-    # uhhhh here to avoid redundancies in the main function
+    
     if len(three_tds[2].find(class_='Hani').text) > 2:
       names = three_tds[2].find_all('a')
       for name in names:
@@ -77,19 +76,14 @@ for ele in tds:
          data.append(dbl)   
    else:
       populate(ele,data)
-# print(len(data))
-   
-# pp(data[643].__dict__)
 
+# mini data set to test writing to JSON
 test_dict = []
+
 for item in data[:10]:
    test_dict.append(item.__dict__)
-# pp(test_dict)
-
-outfile = open('wikiscraper/writetest.json', 'w')
 
 
-
-
+# ensure_ascii false, otherwise character will print as ASCII code
 with open('wikiscraper/writetest.json', 'w') as final:
    json.dump(test_dict, final, indent = 6, ensure_ascii=False)
