@@ -7,12 +7,12 @@ import re
 from pprint import pprint as pp
 
 from entryClass import *
+from constants import * 
 
 #page for entries beginning with the 火 radical
 testURL = 'https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie/%E7%81%AB'
 
 #concat this with hrefs to build complete working URL
-hrefHead = 'https://en.wiktionary.org'
 html_text = requests.get(testURL).text
 
 tableSoup = BeautifulSoup(html_text, 'lxml')

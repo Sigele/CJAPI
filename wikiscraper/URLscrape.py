@@ -12,10 +12,9 @@ url_soup = BeautifulSoup(urls, 'lxml')
 span = url_soup.find(class_="Zyyy")
 urls = span.find_all('a')
 print(len(urls))
-data = []
+radData = []
 for url in urls:
-    data.append(entryURL + '/' + url.text)
+    radData.append(entryURL + '/' + url.text)
 
-print(data)
+print(radData)
     
-# print(url_soup.find_all(href=re.compile('/wiki/Appendix:Chinese_Cangjie/')))

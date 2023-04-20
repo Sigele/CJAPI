@@ -7,10 +7,9 @@ import json
 from pprint import pprint as pp
 
 from entryClass import *
-
+from constants import *
 testURL = 'https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie/%E7%81%AB'
 
-hrefHead = 'https://en.wiktionary.org';
 html_text = requests.get(testURL).text
 
 soup = BeautifulSoup(html_text, 'lxml')
