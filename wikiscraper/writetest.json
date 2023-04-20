@@ -1,116 +1,112 @@
 [
-      {
-            "character": "火",
-            "qwerty": "F",
-            "radicals": [
-                  "火"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%81%AB",
-            "level": 1
-      },
-      {
-            "character": "焻",
-            "qwerty": "FAA",
-            "radicals": [
-                  "火",
-                  "日",
-                  "日"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%84%BB",
-            "level": 3
-      },
-      {
-            "character": "焨",
-            "qwerty": "FAB",
-            "radicals": [
-                  "火",
-                  "日",
-                  "月"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%84%A8",
-            "level": 3
-      },
-      {
-            "character": "煴",
-            "qwerty": "FABT",
-            "radicals": [
-                  "火",
-                  "日",
-                  "月",
-                  "廿"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%85%B4",
-            "level": 4
-      },
-      {
-            "character": "熀",
-            "qwerty": "FAFU",
-            "radicals": [
-                  "火",
-                  "日",
-                  "火",
-                  "山"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%86%80",
-            "level": 4
-      },
-      {
-            "character": "焺",
-            "qwerty": "FAHT",
-            "radicals": [
-                  "火",
-                  "日",
-                  "竹",
-                  "廿"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%84%BA",
-            "level": 4
-      },
-      {
-            "character": "溗",
-            "qwerty": "FAHU",
-            "radicals": [
-                  "火",
-                  "日",
-                  "竹",
-                  "山"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E6%BA%97",
-            "level": 4
-      },
-      {
-            "character": "炟",
-            "qwerty": "FAM",
-            "radicals": [
-                  "火",
-                  "日",
-                  "一"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%82%9F",
-            "level": 3
-      },
-      {
-            "character": "煬",
-            "qwerty": "FAMH",
-            "radicals": [
-                  "火",
-                  "日",
-                  "一",
-                  "竹"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%85%AC",
-            "level": 4
-      },
-      {
-            "character": "焊",
-            "qwerty": "FAMJ",
-            "radicals": [
-                  "火",
-                  "日",
-                  "一",
-                  "十"
-            ],
-            "link": "https://en.wiktionary.org/wiki/%E7%84%8A",
-            "level": 4
-      }
+    {
+        "character": "水",
+        "qwerty": "E",
+        "radicals": [
+            "水"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E6%B0%B4",
+        "level": 1
+    },
+    {
+        "character": "汨",
+        "qwerty": "EA",
+        "radicals": [
+            "水",
+            "日"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E6%B1%A8",
+        "level": 2
+    },
+    {
+        "character": "汩",
+        "qwerty": "EA",
+        "radicals": [
+            "水",
+            "日"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E6%B1%A9",
+        "level": 2
+    },
+    {
+        "character": "沓",
+        "qwerty": "EA",
+        "radicals": [
+            "水",
+            "日"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E6%B2%93",
+        "level": 2
+    },
+    {
+        "character": "淐",
+        "qwerty": "EAA",
+        "radicals": [
+            "水",
+            "日",
+            "日"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E6%B7%90",
+        "level": 3
+    },
+    {
+        "character": "温",
+        "qwerty": "EABT",
+        "radicals": [
+            "水",
+            "日",
+            "月",
+            "廿"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E6%B8%A9",
+        "level": 4
+    },
+    {
+        "character": "㴘",
+        "qwerty": "EABU",
+        "radicals": [
+            "水",
+            "日",
+            "月",
+            "山"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E3%B4%98",
+        "level": 4
+    },
+    {
+        "character": "灝",
+        "qwerty": "EAFC",
+        "radicals": [
+            "水",
+            "日",
+            "火",
+            "金"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E7%81%9D",
+        "level": 4
+    },
+    {
+        "character": "灦",
+        "qwerty": "EAFC",
+        "radicals": [
+            "水",
+            "日",
+            "火",
+            "金"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E7%81%A6",
+        "level": 4
+    },
+    {
+        "character": "灏",
+        "qwerty": "EAFO",
+        "radicals": [
+            "水",
+            "日",
+            "火",
+            "人"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E7%81%8F",
+        "level": 4
+    }
 ]

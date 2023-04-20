@@ -1,3 +1,14 @@
+'''defines Entry class objects.
+character -> '暧'
+qwerty -> 'ABBE'
+radicals -> ['日','月','月','水']
+link -> 'https://en.wiktionary.org/wiki/%E6%9A%A7'
+level -> 4
+
+use getters to populate entry. No setters since...this data is more or less static
+
+'''
+
 class Entry: 
   def __init__(self):
     self.character = ''
