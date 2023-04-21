@@ -16,6 +16,7 @@ class Entry:
     self.radicals = []
     self.link = ''
     self.level = 0
+    self.doubled = False
   
   def get_character(self,string):
     self.character = string
@@ -31,3 +32,6 @@ class Entry:
 
   def get_level(self, number):
     self.level = number
+
+  def get_doubled(self, boolean):
+    self.doubled = boolean

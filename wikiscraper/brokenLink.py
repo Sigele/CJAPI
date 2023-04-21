@@ -1,10 +1,7 @@
 # debugging broken/nonexistent link edge case
 
-from entryClass import *
-from search import search
-#using testURL for manual testing
-from getEntries import *
 
+#using testURL for manual testing
 
 '''
 broken/nonexistent links are identified in 2 ways:

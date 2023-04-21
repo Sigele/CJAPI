@@ -3,7 +3,7 @@
 import re
 import requests
 from pprint import pprint as pp
-from doubledEntry import entries
+
 
 def search(list, crit, str):
   for entry in list: 
