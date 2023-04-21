@@ -5,7 +5,7 @@ import requests
 import re
 import json 
 from pprint import pprint as pp
-
+from brokenLink import brokenLinkCheck
 from entryClass import *
 from constants import *
 testURL = 'https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie/%E7%81%AB'
@@ -37,6 +37,7 @@ def dblEntryCheck(three_tds):
          e2.get_qwerty(three_tds[1].text[1:-1])
          e2.get_radicals(three_tds[0].text)
          e2.get_level(len(e2.radicals))
+         #broken link SC: print data 21:31
          if(brokenLinkCheck(three_tds) == True):
             e2.get_link('Sorry, ', 'the link is missing!')
          else: 
@@ -44,10 +45,6 @@ def dblEntryCheck(three_tds):
          result.append(e2)   
     if (len(result) == 0): return
     return result;
-
-def brokenLinkCheck(listOf3Elements):
-  if len(listOf3Elements[2].find('a')['title']) > 1:
-    return True
 
 def populate(ele, list):
 
@@ -79,7 +76,7 @@ for ele in tds:
 # mini data set to test writing to JSON
 test_dict = []
 
-for item in data[:10]:
+for item in data[21:31]:
    test_dict.append(item.__dict__)
 
 
