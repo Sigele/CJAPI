@@ -1,47 +1,59 @@
 [
     {
-        "character": "佷",
-        "qwerty": "OAV",
+        "character": "邑",
+        "qwerty": "RAU",
         "radicals": [
-            "人",
+            "口",
+            "日",
+            "山"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E9%82%91",
+        "level": 3,
+        "doubled": true
+    },
+    {
+        "character": "哏",
+        "qwerty": "RAV",
+        "radicals": [
+            "口",
             "日",
             "女"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E4%BD%B7",
+        "link": "https://en.wiktionary.org/wiki/%E5%93%8F",
         "level": 3,
         "doubled": false
     },
     {
-        "character": "儑",
-        "qwerty": "OAVF",
+        "character": "𠼦",
+        "qwerty": "RAWE",
         "radicals": [
-            "人",
-            "日",
-            "女",
-            "火"
-        ],
-        "link": "https://en.wiktionary.org/wiki/%E5%84%91",
-        "level": 4,
-        "doubled": false
-    },
-    {
-        "character": "僈",
-        "qwerty": "OAWE",
-        "radicals": [
-            "人",
+            "口",
             "日",
             "田",
             "水"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E5%83%88",
+        "link": "Sorry, the link is missing!",
         "level": 4,
         "doubled": false
     },
     {
-        "character": "𠎠",
-        "qwerty": "OAYF",
+        "character": "敯",
+        "qwerty": "RAYE",
         "radicals": [
-            "人",
+            "口",
+            "日",
+            "卜",
+            "水"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E6%95%AF",
+        "level": 4,
+        "doubled": false
+    },
+    {
+        "character": "𠾶",
+        "qwerty": "RAYF",
+        "radicals": [
+            "口",
             "日",
             "卜",
             "火"
@@ -51,76 +63,66 @@
         "doubled": false
     },
     {
-        "character": "仴",
-        "qwerty": "OB",
+        "character": "喅",
+        "qwerty": "RAYT",
         "radicals": [
-            "人",
-            "月"
-        ],
-        "link": "https://en.wiktionary.org/wiki/%E4%BB%B4",
-        "level": 2,
-        "doubled": true
-    },
-    {
-        "character": "內",
-        "qwerty": "OB",
-        "radicals": [
-            "人",
-            "月"
-        ],
-        "link": "https://en.wiktionary.org/wiki/%E5%85%A7",
-        "level": 2,
-        "doubled": true
-    },
-    {
-        "character": "俷",
-        "qwerty": "OBAU",
-        "radicals": [
-            "人",
-            "月",
+            "口",
             "日",
-            "山"
+            "卜",
+            "廿"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E4%BF%B7",
+        "link": "https://en.wiktionary.org/wiki/%E5%96%85",
         "level": 4,
         "doubled": false
     },
     {
-        "character": "倗",
-        "qwerty": "OBB",
+        "character": "肙",
+        "qwerty": "RB",
         "radicals": [
-            "人",
-            "月",
+            "口",
             "月"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E5%80%97",
-        "level": 3,
+        "link": "https://en.wiktionary.org/wiki/%E8%82%99",
+        "level": 2,
         "doubled": false
     },
     {
-        "character": "傦",
-        "qwerty": "OBBB",
+        "character": "嗗",
+        "qwerty": "RBBB",
         "radicals": [
-            "人",
+            "口",
             "月",
             "月",
             "月"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E5%82%A6",
+        "link": "https://en.wiktionary.org/wiki/%E5%97%97",
         "level": 4,
         "doubled": false
     },
     {
-        "character": "僾",
-        "qwerty": "OBBE",
+        "character": "㖟",
+        "qwerty": "RBBE",
         "radicals": [
-            "人",
+            "口",
             "月",
             "月",
             "水"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E5%83%BE",
+        "link": "https://en.wiktionary.org/wiki/%E3%96%9F",
         "level": 4,
-        "doubled": false
+        "doubled": true
+    },
+    {
+        "character": "噯",
+        "qwerty": "RBBE",
+        "radicals": [
+            "口",
+            "月",
+            "月",
+            "水"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E5%99%AF",
+        "level": 4,
+        "doubled": true
     }
 ]

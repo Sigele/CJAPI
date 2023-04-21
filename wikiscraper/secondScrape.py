@@ -17,6 +17,7 @@ html_text = requests.get(testURL).text
 soup = BeautifulSoup(html_text, 'lxml')
 table = soup.find_all('tr')
 
+# grabbing all td elements
 def getEntries(table):
     elements = []
     for trow in table:
@@ -25,6 +26,7 @@ def getEntries(table):
 
     return elements
 
+#func to create a single new Entry
 def populate(ele, list):
     entry = Entry()
     entry.get_character(ele[2].find(class_='Hani').text)
@@ -37,9 +39,10 @@ def populate(ele, list):
       entry.get_link(hrefHead, ele[2].find('a')['href'])
     list.append(entry)
 
+#incorporating doubled edge case where needed
 tripleTds = getEntries(table)
-
 data = []
+
 for ele in tripleTds:
    doubles = dblEntryCheck(ele)
    if hasattr(doubles, '__len__'):
@@ -49,6 +52,7 @@ for ele in tripleTds:
          data.append(dbl)   
    else:
       populate(ele,data)
+
 
 #testing!!!
 test_dict = []
