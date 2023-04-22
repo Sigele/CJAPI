@@ -66,6 +66,9 @@ class TestEntry(unittest.TestCase):
 
     # def test_link(self):
     #     # all links should go to wiktionary
+        self.e_1.get_link(hrefHead,"/wiki/%E4%A8%9C")
+        print(self.e_1.link)
+        self.assertTrue(self.e_1.link.find(hrefHead))
     #     # link must not be broken
     #     # should be a string
 
