@@ -42,24 +42,27 @@ class TestEntry(unittest.TestCase):
             "月",
             "水"
             ])
+        
         self.assertIsInstance(self.e_1.radicals, list, '"radicals" should be a list')
         for char in self.e_1.radicals:
             self.assertIsInstance(char, str)
             self.assertTrue(len(char) == 1, 'each radical list element should be a single character')
+
         # radicals should be CJK values only
             self.assertTrue(re.search(u'[\u4e00-\u9fff]',char), 'each character in "radicals" should be CJK ideograph')
+
         # radicals length should match qwerty length
         self.e_1.get_qwerty("RBBE")
         self.assertEqual(len(self.e_1.qwerty), len(self.e_1.radicals))
+
         # radicals should map to qwerty exactly
-        counter = []
-        qwerty_convert = []
+        testMap = []
         for char in self.e_1.qwerty:
-            print('char-> ',char)
-            char = radMap(str(char))
-            print('char2 -> ', char)
-            # qwerty_convert.append(str(radMap(char)))
-            # print(qwerty_convert)
+            testMap.append(rads[char])
+        counter = 0
+        for ele in testMap:
+            self.assertEqual(ele, self.e_1.radicals[counter])
+            counter += 1
 
     # def test_link(self):
     #     # all links should go to wiktionary
