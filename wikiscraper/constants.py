@@ -5,7 +5,7 @@ entryURL = 'https://en.wiktionary.org/wiki/Appendix:Chinese_Cangjie';
 
 hrefHead = 'https://en.wiktionary.org'
 
-def radMap(qwerty):
+def radMap(input):
   rads = {
         "A":"日", "B":"月", "C":"金", "D":"木",
         "E":"水", "F":"火", "G":"土", "H":"竹",
@@ -16,16 +16,16 @@ def radMap(qwerty):
         "Y":"卜", "Z":"重"
     }
   
-
+  u_input = input.upper()
   def get_key(val):
     for key, value in rads.items():
         if val == value:
           print(key)
           return key
-        else:
-           return value
- 
-    return "key doesn't exist"
+        elif val == key:
+           print(value)
+           return (value)
+    return "not found :("
+    
+  get_key(u_input)
 
-
-radMap('女')
