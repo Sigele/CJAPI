@@ -4,7 +4,7 @@ import json
 from pprint import pprint as pp
 from bs4 import BeautifulSoup
 
-from sandbox2 import *
+from secondScrape import *
 from constants import *
 from entryClass import *
 from firstScrape import *

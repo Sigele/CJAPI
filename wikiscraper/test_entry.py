@@ -52,6 +52,14 @@ class TestEntry(unittest.TestCase):
         self.e_1.get_qwerty("RBBE")
         self.assertEqual(len(self.e_1.qwerty), len(self.e_1.radicals))
         # radicals should map to qwerty exactly
+        counter = []
+        qwerty_convert = []
+        for char in self.e_1.qwerty:
+            print('char-> ',char)
+            char = radMap(str(char))
+            print('char2 -> ', char)
+            # qwerty_convert.append(str(radMap(char)))
+            # print(qwerty_convert)
 
     # def test_link(self):
     #     # all links should go to wiktionary

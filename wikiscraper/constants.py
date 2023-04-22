@@ -20,12 +20,22 @@ def radMap(input):
   def get_key(val):
     for key, value in rads.items():
         if val == value:
-          print(key)
-          return key
+          # print(key)
+          return str(key)
         elif val == key:
-           print(value)
-           return (value)
+          #  print(value)
+           return str(value)
     return "not found :("
     
   get_key(u_input)
+
+qty = "RBBE"
+letRad = [
+            "口",
+            "月",
+            "月",
+            "水"
+            ]
+letMap = []
+ 
 
