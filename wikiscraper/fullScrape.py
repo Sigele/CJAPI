@@ -1,3 +1,11 @@
+'''I won't move forward on this until secondScrape has been fully tested.
+
+A tentative step towards combining scrape 1 and scrape 2
+
+'''
+
+
+
 import requests
 import json
 

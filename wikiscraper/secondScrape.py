@@ -1,3 +1,14 @@
+''''
+A horrible behemoth. Scrapes an individual subappendix for all character elements, and creates entries to write to writetest.json (for now). 
+
+DO NOT print full data set!!!!!!
+
+
+
+
+'''
+
+
 from bs4 import BeautifulSoup
 import requests
 import json
@@ -10,8 +21,10 @@ from dblEntryCheck import dblEntryCheck
 from brokenLink import brokenLinkCheck
 from constants import *
 
+#testLinks is a list of all the subappendices. Here we choose one to scrape randomly
 testURL = testLinks[random.randrange(0,24,1)]
 print(testURL)
+
 
 html_text = requests.get(testURL).text
 soup = BeautifulSoup(html_text, 'lxml')
@@ -62,3 +75,5 @@ for item in data[21:31]:
 
 with open('wikiscraper/writetest.json', 'w')  as final:
    json.dump(test_dict, final, indent = 4, ensure_ascii=False)
+
+

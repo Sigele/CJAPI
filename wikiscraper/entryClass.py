@@ -1,12 +1,18 @@
 '''defines Entry class objects.
+
+EXAMPLE: 
+
 character -> '暧'
 qwerty -> 'ABBE'
 radicals -> ['日','月','月','水']
 link -> 'https://en.wiktionary.org/wiki/%E6%9A%A7'
 level -> 4
+doubled -> True (another entry shares qwerty and radical values)
 
 use getters to populate entry. No setters since...this data is more or less static
 
+
+might combine with constants.py to minimize imports
 '''
 
 class Entry: 
@@ -18,12 +24,13 @@ class Entry:
     self.level = 0
     self.doubled = False
   
+  
   def get_character(self,string):
     self.character = string
 
   def get_qwerty(self, string):
     self.qwerty = string
-
+  
   def get_radicals(self, string):
     self.radicals = list(string)
 

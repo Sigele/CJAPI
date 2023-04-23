@@ -21,6 +21,12 @@ def URLgrab(url):
 
   urlSoup = BeautifulSoup(page_text, 'lxml')
 
+  #this returns a list of elements. the actual text of the link is extracted below. Can I combine these to simplify the function? (try monday)
+
+  # for link in linkSoup:
+    # links.append(hrefHead + link['href])
+
+
   linkSoup = urlSoup.findAll('a', href=re.compile('/wiki/Appendix:Chinese_Cangjie/%'))
 
   links = []

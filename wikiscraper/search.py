@@ -18,4 +18,6 @@ def search(list, crit, str):
 import os 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-export PYTHONPATH="${PYTHONPATH}:/Users/user/Desktop/CS/Codesmith/SoloProject/REFACTORED/wikiscraper/"
+#code below alters pythonpath to allow modules from parent folder to be imported into subfolders. Python is silly.
+
+# export PYTHONPATH="${PYTHONPATH}:/Users/user/Desktop/CS/Codesmith/SoloProject/REFACTORED/wikiscraper/"
