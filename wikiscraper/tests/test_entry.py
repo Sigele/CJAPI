@@ -1,7 +1,10 @@
+# import sys
+# sys.path.insert(1, '/CS/Codesmith/SoloProject/REFACTORED/wikiscraper')
+
 import unittest
 import re
-from constants import *
-from entryClass import Entry
+from wikiscraper.constants import *
+from wikiscraper.entryClass import Entry
 
 
 
@@ -64,7 +67,7 @@ class TestEntry(unittest.TestCase):
             self.assertEqual(ele, self.e_1.radicals[counter])
             counter += 1
 
-    # def test_link(self):
+    def test_link(self):
     #     # all links should go to wiktionary
         self.e_1.get_link(hrefHead,"/wiki/%E4%A8%9C")
         print(self.e_1.link)

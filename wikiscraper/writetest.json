@@ -1,139 +1,132 @@
 [
     {
-        "character": "䣟",
-        "qwerty": "MANL",
+        "character": "岗",
+        "qwerty": "UBK",
         "radicals": [
-            "一",
-            "日",
-            "弓",
-            "中"
+            "山",
+            "月",
+            "大"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E4%A3%9F",
+        "link": "https://en.wiktionary.org/wiki/%E5%B2%97",
+        "level": 3,
+        "doubled": false
+    },
+    {
+        "character": "剬",
+        "qwerty": "UBLN",
+        "radicals": [
+            "山",
+            "月",
+            "中",
+            "弓"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E5%89%AC",
         "level": 4,
         "doubled": true
     },
     {
-        "character": "㪶",
-        "qwerty": "MAYJ",
+        "character": "剻",
+        "qwerty": "UBLN",
         "radicals": [
-            "一",
-            "日",
-            "卜",
-            "十"
+            "山",
+            "月",
+            "中",
+            "弓"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E3%AA%B6",
+        "link": "https://en.wiktionary.org/wiki/%E5%89%BB",
         "level": 4,
+        "doubled": true
+    },
+    {
+        "character": "㔒",
+        "qwerty": "UBLN",
+        "radicals": [
+            "山",
+            "月",
+            "中",
+            "弓"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E3%94%92",
+        "level": 4,
+        "doubled": true
+    },
+    {
+        "character": "岨",
+        "qwerty": "UBM",
+        "radicals": [
+            "山",
+            "月",
+            "一"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E5%B2%A8",
+        "level": 3,
         "doubled": false
     },
     {
-        "character": "霷",
-        "qwerty": "MBAAH",
+        "character": "顓",
+        "qwerty": "UBMBC",
         "radicals": [
+            "山",
+            "月",
             "一",
             "月",
-            "日",
-            "日",
-            "竹"
+            "金"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E9%9C%B7",
+        "link": "https://en.wiktionary.org/wiki/%E9%A1%93",
         "level": 5,
         "doubled": false
     },
     {
-        "character": "䨠",
-        "qwerty": "MBAPV",
+        "character": "颛",
+        "qwerty": "UBMBO",
         "radicals": [
+            "山",
+            "月",
             "一",
             "月",
-            "日",
-            "心",
-            "女"
+            "人"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E4%A8%A0",
+        "link": "https://en.wiktionary.org/wiki/%E9%A2%9B",
         "level": 5,
         "doubled": false
     },
     {
-        "character": "𩅍",
-        "qwerty": "MBAWE",
+        "character": "嵈",
+        "qwerty": "UBME",
         "radicals": [
-            "一",
+            "山",
             "月",
-            "日",
-            "田",
+            "一",
             "水"
         ],
-        "link": "Sorry, the link is missing!",
-        "level": 5,
-        "doubled": false
-    },
-    {
-        "character": "䨜",
-        "qwerty": "MBBB",
-        "radicals": [
-            "一",
-            "月",
-            "月",
-            "月"
-        ],
-        "link": "https://en.wiktionary.org/wiki/%E4%A8%9C",
+        "link": "https://en.wiktionary.org/wiki/%E5%B5%88",
         "level": 4,
         "doubled": false
     },
     {
-        "character": "霌",
-        "qwerty": "MBBGR",
+        "character": "嶾",
+        "qwerty": "UBMP",
         "radicals": [
+            "山",
+            "月",
             "一",
+            "心"
+        ],
+        "link": "https://en.wiktionary.org/wiki/%E5%B6%BE",
+        "level": 4,
+        "doubled": false
+    },
+    {
+        "character": "峒",
+        "qwerty": "UBMR",
+        "radicals": [
+            "山",
             "月",
-            "月",
-            "土",
+            "一",
             "口"
         ],
-        "link": "https://en.wiktionary.org/wiki/%E9%9C%8C",
-        "level": 5,
-        "doubled": false
-    },
-    {
-        "character": "霾",
-        "qwerty": "MBBHG",
-        "radicals": [
-            "一",
-            "月",
-            "月",
-            "竹",
-            "土"
-        ],
-        "link": "https://en.wiktionary.org/wiki/%E9%9C%BE",
-        "level": 5,
-        "doubled": false
-    },
-    {
-        "character": "霢",
-        "qwerty": "MBBHV",
-        "radicals": [
-            "一",
-            "月",
-            "月",
-            "竹",
-            "女"
-        ],
-        "link": "https://en.wiktionary.org/wiki/%E9%9C%A2",
-        "level": 5,
-        "doubled": false
-    },
-    {
-        "character": "霡",
-        "qwerty": "MBBIE",
-        "radicals": [
-            "一",
-            "月",
-            "月",
-            "戈",
-            "水"
-        ],
-        "link": "https://en.wiktionary.org/wiki/%E9%9C%A1",
-        "level": 5,
+        "link": "https://en.wiktionary.org/wiki/%E5%B3%92",
+        "level": 4,
         "doubled": false
     }
 ]

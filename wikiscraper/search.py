@@ -14,3 +14,8 @@ def search(list, crit, str):
 
 # result = search(entries, 'qwerty', 'FAM')
 # print(result.character)
+
+import os 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+export PYTHONPATH="${PYTHONPATH}:/Users/user/Desktop/CS/Codesmith/SoloProject/REFACTORED/wikiscraper/"
