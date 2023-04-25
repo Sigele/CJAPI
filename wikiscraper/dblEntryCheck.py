@@ -5,7 +5,8 @@
 
 from entryClass import Entry
 from brokenLink import brokenLinkCheck
-from constants import *
+# from constants import *
+from entryClass import *
 
 def dblEntryCheck(three_tds):
 
@@ -24,7 +25,7 @@ def dblEntryCheck(three_tds):
          if(brokenLinkCheck(three_tds) == True):
             e2.get_link('Sorry, ', 'the link is missing!')
          else: 
-            e2.get_link(hrefHead, name['href'])
+            e2.get_link(Entry.hrefHead, name['href'])
          e2.get_doubled(True)
          result.append(e2)   
 

@@ -13,7 +13,8 @@ This data shouldn't pass to the db per se but should be used as an entry point f
 from bs4 import BeautifulSoup
 import requests
 import re
-from constants import *
+# from constants import *
+from entryClass import *
 ##added functionailty to func block for export
 
 def URLgrab(url):
@@ -21,22 +22,15 @@ def URLgrab(url):
 
   urlSoup = BeautifulSoup(page_text, 'lxml')
 
-  #this returns a list of elements. the actual text of the link is extracted below. Can I combine these to simplify the function? (try monday)
-
-  # for link in linkSoup:
-    # links.append(hrefHead + link['href])
-
-
   linkSoup = urlSoup.findAll('a', href=re.compile('/wiki/Appendix:Chinese_Cangjie/%'))
 
   links = []
 
   for link in linkSoup:
-    href = link['href']
-    links.append(hrefHead + href)
+    links.append(Entry.hrefHead + link['href'])
 
   return links
 
 
-testLinks = (URLgrab(entryURL))
+testLinks = (URLgrab(Entry.entryURL))
 print('hey now!!',testLinks)

@@ -1,6 +1,7 @@
 import unittest
 from secondScrape import *
-from constants import *
+# from constants import *
+from entryClass import *
 
 # check constants
 # check val returned by get entries //list of 3 idx sublists
@@ -13,7 +14,7 @@ class Test_basic(unittest.TestCase):
   def test_URL(self):
       self.assertIsInstance(testURL, str)
   def test_href(self):
-     self.assertEqual(hrefHead, 'https://en.wiktionary.org')
+     self.assertEqual(Entry.hrefHead, 'https://en.wiktionary.org')
   def test_html(self):
      self.assertIsInstance(html_text, str)
   def test_soup(self):

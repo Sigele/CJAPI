@@ -15,11 +15,11 @@ import json
 import random
 from pprint import pprint as pp
 
-from entryClass import Entry
+from entryClass import *
 from firstScrape import testLinks
 from dblEntryCheck import dblEntryCheck
 from brokenLink import brokenLinkCheck
-from constants import *
+# from constants import *
 
 #testLinks is a list of all the subappendices. Here we choose one to scrape randomly
 testURL = testLinks[random.randrange(0,24,1)]
@@ -49,7 +49,7 @@ def populate(ele, list):
     if (brokenLinkCheck(ele) == True):
       entry.get_link('Sorry, ' , 'the link is missing!')
     else:
-      entry.get_link(hrefHead, ele[2].find('a')['href'])
+      entry.get_link(Entry.hrefHead, ele[2].find('a')['href'])
     list.append(entry)
 
 #incorporating doubled edge case where needed

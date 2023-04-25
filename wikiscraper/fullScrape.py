@@ -13,12 +13,12 @@ from pprint import pprint as pp
 from bs4 import BeautifulSoup
 
 from secondScrape import *
-from constants import *
+# from constants import *
 from entryClass import *
 from firstScrape import *
 
 
-links = URLgrab(entryURL)
+links = URLgrab(Entry.entryURL)
 
 testLink = links[4]
 

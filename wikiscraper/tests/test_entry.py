@@ -3,8 +3,8 @@
 
 import unittest
 import re
-from wikiscraper.constants import *
-from wikiscraper.entryClass import Entry
+# from wikiscraper.constants import *
+from wikiscraper.entryClass import *
 
 
 
@@ -61,7 +61,7 @@ class TestEntry(unittest.TestCase):
         # radicals should map to qwerty exactly
         testMap = []
         for char in self.e_1.qwerty:
-            testMap.append(rads[char])
+            testMap.append(Entry.rads[char])
         counter = 0
         for ele in testMap:
             self.assertEqual(ele, self.e_1.radicals[counter])
@@ -69,9 +69,9 @@ class TestEntry(unittest.TestCase):
 
     def test_link(self):
     #     # all links should go to wiktionary
-        self.e_1.get_link(hrefHead,"/wiki/%E4%A8%9C")
+        self.e_1.get_link(Entry.hrefHead,"/wiki/%E4%A8%9C")
         print(self.e_1.link)
-        self.assertTrue(self.e_1.link.find(hrefHead))
+        self.assertTrue(self.e_1.link.find(Entry.hrefHead))
     #     # link must not be broken
     #     # should be a string
 
