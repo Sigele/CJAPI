@@ -71,16 +71,30 @@ class TestEntry(unittest.TestCase):
     #     # all links should go to wiktionary
         self.e_1.get_link(Entry.hrefHead,"/wiki/%E4%A8%9C")
         print(self.e_1.link)
-        self.assertTrue(self.e_1.link.find(Entry.hrefHead))
-    #     # link must not be broken
-    #     # should be a string
+         # link must not be broken
+        self.assertFalse(self.e_1.link.find(Entry.hrefHead) == -1)
+         # should be a string
+        self.assertIsInstance(self.e_1.link, str)
+   
+    def test_level(self):
+        self.e_1.get_radicals([
+            "口",
+            "月",
+            "月",
+            "水"
+            ])
+        self.e_1.get_level(len(self.e_1.radicals))
+        # level should be a number
+        self.assertIsInstance(self.e_1.level, int)
+        # level should equal length of qwerty and/or radicals
+        self.assertEqual(len(self.e_1.radicals), self.e_1.level)
 
-    # def test_level(self):
-    #     # level should be a number
-    #     # level should equal length of qwerty and/or radicals
+    def test_doubled(self):
+        self.e_1.get_doubled(False)
+        # should be a boolean value
+        self.assertIsInstance(self.e_1.doubled, bool)
+        # cannot be null
+        self.assertIsNot(self.e_1.doubled, None)
 
-    # def test_doubled(self):
-    #     # should be a boolean value
-    #     # cannot be null
 if __name__ == '__main__':
     unittest.main()
