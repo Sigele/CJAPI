@@ -1,9 +1,21 @@
+require('dotenv').config()
+
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3333;
-
+const mongoose = require('mongoose')
+const PORT = 3000;
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://Sigele:65wEJ5Bi746QzZG@cluster1.yx0hcby.mongodb.net/?retryWrites=true&w=majority";
 //add controllers!
+
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true
+})
+
+const db = mongoose.connection
+db.on('error', (error) => console.error(error))
+db.once('open', () => console.log('connected to database'))
 
 app.use(express.json());
 
@@ -14,11 +26,13 @@ app.use(express.json());
 //return entry or entries
 
 //add entries (scraper)
-app.post()
 
-app.delete()
 
-app.get()
+
+
+app.get('/',(req,res) => {
+  return res.sendFile(path.resolve('client', 'index.html'));
+});
 
 //global error handling
 app.use((err, req, res, next) => {
@@ -39,3 +53,5 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Listening on Port ${PORT}`);
 });
+
+module.exports = app;
