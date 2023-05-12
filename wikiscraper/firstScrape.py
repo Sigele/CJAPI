@@ -33,4 +33,4 @@ def URLgrab(url):
 
 
 testLinks = (URLgrab(Entry.entryURL))
-print('hey now!!',testLinks)
+# print('hey now!!',testLinks)
