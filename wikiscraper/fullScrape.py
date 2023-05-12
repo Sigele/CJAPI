@@ -8,7 +8,7 @@ A tentative step towards combining scrape 1 and scrape 2
 
 import requests
 import json
-
+import time
 from pprint import pprint as pp
 from bs4 import BeautifulSoup
 
@@ -21,6 +21,7 @@ links = URLgrab(Entry.entryURL)
 
 allTds = []
 dict = []
+start = time.time()
 for link in links:
    linkSoup = BeautifulSoup(requests.get(link).text, 'lxml')
    linkTable = linkSoup.findAll('tr')
@@ -46,7 +47,8 @@ for item in dict:
    testy.append(item.__dict__)
 with open('wikiscraper/writetest.json', 'w') as final:
    json.dump(testy, final, indent=4, ensure_ascii=False)
-
+end = time.time()
+print("elapsed time: ",end - start)
 #trying with smaller # first
 # testLink = links[random.randrange(0,24,1)]
 # print('testURL', testURL)
